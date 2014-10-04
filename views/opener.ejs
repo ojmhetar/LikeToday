@@ -12,11 +12,16 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/colors.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/backgrounds.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/fonts.css"/>
+		<style>
+			body {
+				background-image: 'public/images/liketodaylogo.png';
+			}
+		</style>
 	</head>
 
 	<body>
 		<form id="search" method="post" action="http://localhost:3000/subreq">
-			<input type="text" id="sField" placeholder="Search..." required>
+			<input type="text" name="searchF" id="sField" placeholder="Search..." required>
 			<input type="submit" id="but" value="Search">
 		</form>
 	</body>
