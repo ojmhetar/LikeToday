@@ -30,7 +30,9 @@ if ('development' == app.get('env')) {
 
 //app.get('/', routes.index);
 app.get('/home', function(req, res) {
-  res.render('index', { title: 'The index page!' })
+
+  res.render('index', { rank_1_url: 'http://blah.com' })
+
 });
 //app.get('/', function(req, res) {
 //	res.sendfile(__dirname + '/public/index.html');
