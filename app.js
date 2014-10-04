@@ -8,6 +8,7 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var request = require("request");
 
 var app = express();
 
@@ -28,9 +29,48 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+
+var data = [
+		    { id: 1, name: "bob", score: 5 },
+		    { id: 2, name: "john", score: 10 },
+		    { id: 3, name: "jake", score: 3 },
+			];
+
+
 //app.get('/', routes.index);
 app.get('/home', function(req, res) {
-  res.render('index', { title: 'The index page!' })
+  res.render('index', { })
+});
+app.get('/', function(req, res) {
+  res.render('opener', { title: 'The index page!' })
+});
+
+app.get('/linktest', function(req, res) {
+  var url = "http://liketodaydata.gopagoda.com/feed/linksJSONStatic"
+
+		request({
+	    url: url,
+	    json: true
+	}, function (error, response, body) {
+
+	    if (!error && response.statusCode === 200) {
+
+
+			function sortByKey(array, key) {
+			return array.sort(function(a, b) {
+			    var x = a[key]; var y = b[key];
+			    return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+				});
+			}
+
+			weblist = sortByKey(body, 'score');
+
+
+	        res.render('index', { some: weblist})
+	    }
+	})
+	
+
 });
 //app.get('/', function(req, res) {
 //	res.sendfile(__dirname + '/public/index.html');
