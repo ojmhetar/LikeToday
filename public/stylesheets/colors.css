@@ -1,0 +1,9 @@
+/* ==========================================================================
+   Background colors
+   ========================================================================== */
+#logo, .tagcloud a:hover, #wp-calendar th, #carousel-container .bx-controls a:hover,.article-standard:hover .format-post, .article-vertical:hover .format-post,#footer .tagcloud a:hover, a.button.colored, input[type=submit].colored, input[type=reset].colored, input[type=button].colored
+{background-color:#e74c3c}
+/* ==========================================================================
+   Rating stars color
+   ========================================================================== */
+.review-stars span.star-full, .review-stars span.star-empty, .review-stars span.star-half {color: #e67e22 !important}

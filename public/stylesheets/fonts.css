@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Body
+   ========================================================================== */
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	line-height: 22px
+}
+/* ==========================================================================
+   Headings, menu etc.
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6, ul.primary-navigation a, .entry-meta, #sidebar ul.widget-social-profile li strong, .bx-caption, #wp-calendar .wp-header th.month-and-year, a.read-more, .multiple-posts-title,ul.pagination, #copyright, #share-this-article .share-text, #post-controls a span, #rating-overview .rating-score, .reply a, .comment-meta span, .dropcap:first-letter, blockquote, .pullquote-left, .pullquote-right, #intro-block .button {
+	font-family: 'Roboto Slab', serif;
+}
