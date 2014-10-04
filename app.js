@@ -72,6 +72,12 @@ app.get('/linktest', function(req, res) {
 	
 
 });
+
+app.post('/subreq', function(req, res) {
+	var query = req.body.sField;
+	res.redirect('/linktest');
+	
+}) 
 //app.get('/', function(req, res) {
 //	res.sendfile(__dirname + '/public/index.html');
 //});

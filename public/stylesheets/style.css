@@ -18,6 +18,7 @@
 
 
 
+
 /* ==========================================================================
    RESET http://meyerweb.com/eric/tools/css/reset/
    ========================================================================== */
@@ -458,6 +459,8 @@ div.caption span {
 form {
 	padding: 0;
 	margin: 0;
+	height: 30px;
+	width: 120px;
 }
 fieldset {
 	margin: 30px 0 20px 0;
@@ -530,7 +533,7 @@ input {
 	margin: 0;
 	border: 1px solid #ccc;
 	font-size: 1em;
-	padding: 10px;
+	padding: 5px;
 	background: #fff;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
