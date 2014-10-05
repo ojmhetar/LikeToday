@@ -29,7 +29,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-
+//IP for aws: http://54.69.171.165/ 
 var data = [
 		    { id: 1, name: "bob", score: 5 },
 		    { id: 2, name: "john", score: 10 },
@@ -37,15 +37,11 @@ var data = [
 			];
 
 
-//app.get('/', routes.index);
-app.get('/home', function(req, res) {
-  res.render('index', { })
-});
 app.get('/', function(req, res) {
   res.render('opener', { title: 'The index page!' })
 });
 
-app.get('/linktest', function(req, res) {
+app.get('/home', function(req, res) {
  
 
   //console.log(word);
