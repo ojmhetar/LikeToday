@@ -14,7 +14,7 @@
     </script>
 
 <!-- Page title -->
-<title>iMagPress |  Magazine Flat Theme </title>
+<title> Like Today - Today's Hotest News</title>
 <!-- Meta description -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
@@ -45,8 +45,30 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png"/>
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png"/>
 
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
 <script> 
     var one = 3; 
+
+
+    $(function()
+    {
+        featureArticles = $('#featured-slider-pager');
+        //featureArticles
+        proceed = $('#proceed');
+
+        proceed.click(function(e)
+        {
+            featureArticles.scrollTop(featureArticles.scrollTop() + 130);
+
+
+        });
+
+    }
+
+        );
 
 </script>
 
@@ -84,8 +106,7 @@ iframe {
 #logo
 {
     background-color: transparent;
-    vertical-align: middle;
-    display: inline-block;
+    vertical-align: top;
 }
 .upperBar
 {
@@ -110,21 +131,20 @@ iframe {
 <div id="top-bar">
 	<!-- Menu -->                                  
     <ul class="top-menu">
-        <li><img height="100px" width="100px" src="images/liketodaylogo.png"> </img></li>
+        <li><img id="logo" src="images/liketoday-small.png"> </img></li>
         <li><a href="http://liketoday.com/home">All</a></li>
         <li><a href="http://liketoday.com/Blacksburg">Blacksburg</a></li>
         <li><a href="http://liketoday.com/Tech">Technology StartUps</a></li>
         <li>
         <form method="post" action="http://warm-peak-1670.herokuapp.com/subreq">
-            <input type="text" class="search-field" placeholder="Add a channel"/>
-            <input type="submit">
+            <input type="text" class="search-field" placeholder="Add a channel"/> 
         </form>
         </li>
     </ul>
 	<!-- Social icons -->
 	<ul class="social-icons">
     	<li class="twitter"><a href="http://www.twitter.com/LikeTodayNews"><i class="icon-twitter"></i></a></li>
-        <li class="facebook"><a href="http://www.facebook.com/pages/LikeToday"><i class="icon-facebook"></i></a></li>
+        <li class="facebook"><a href="https://www.facebook.com/LikeTodayNews"><i class="icon-facebook"></i></a></li>
         <li class="youtube"><a href="https://www.youtube.com/channel/UCU-EUTuWjSXr2YnHxHsp6EQ"><i class="icon-youtube"></i></a></li>
     </ul>
 
@@ -135,14 +155,18 @@ iframe {
 <div id="slider-container">
     <div class="container">
         <!-- Slides MUST BE 5 -->
-        <div class="upperBar" width="1024" height="760"><img src="images/Thumb-Bar.png"></img></div>
+        <div class="upperBar" width="1024" height="760"><a id="proceed" href="#"><img src="images/Thumb-Bar-Green.png"></img></a></div>
         <ul id="featured-slider">
             <li><iframe src="<%= some[1].url%>" width="1024" height="760"></iframe></li>
             <li><iframe src="<%= some[2].url%>" width="1024" height="760"></iframe></li>
             <li><iframe src="<%= some[3].url%>" width="1024" height="760"></iframe></li>
-            <li><iframe src="<%= some[4].url%>" width="1024" height="760"></iframe></li>
+            <li><iframe src="<%= some[4].url%>" width="1024" he<ight="760"></iframe></li>
             <li><iframe src="<%= some[5].url%>" width="1024" height="760"></iframe></li>
             <li><iframe src="<%= some[6].url%>" width="1024" height="760"></iframe></li>
+            <li><iframe src="<%= some[7].url%>" width="1024" height="760"></iframe></li>
+            <li><iframe src="<%= some[8].url%>" width="1024" height="760"></iframe></li>
+            <li><iframe src="<%= some[9].url%>" width="1024" height="760"></iframe></li>
+            <li><iframe src="<%= some[10].url%>" width="1024" height="760"></iframe></li>
         </ul>
         <!-- Tabs for slides MUST BE 5 -->
         <div id="featured-slider-pager">
@@ -247,6 +271,74 @@ iframe {
                         <span class="by-date">1 day ago</span>
                     </div>
                 </div>
+            <a data-slide-index="6" href="">
+                <img src="<%= some[7].image_url%>" alt="Image"/>
+                <h3><%= some[Math.floor((Math.random() * 10) + 1)].title %></h3>
+                <div class="entry-meta">
+                    <div class="review-stars">
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-half"></span>
+                    </div>
+                    <div class="description-em">
+                        <span class="by-view-number">47</span>
+                        <span class="by-date">1 day ago</span>
+                    </div>
+                </div>
+            </a>
+            <a data-slide-index="7" href="">
+                <img src="<%= some[8].image_url%>" alt="Image"/>
+                <h3><%= some[Math.floor((Math.random() * 10) + 1)].title %></h3>
+                <div class="entry-meta">
+                    <div class="review-stars">
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-half"></span>
+                    </div>
+                    <div class="description-em">
+                        <span class="by-view-number">47</span>
+                        <span class="by-date">1 day ago</span>
+                    </div>
+                </div>
+            </a>
+            <a data-slide-index="8" href="">
+                <img src="<%= some[9].image_url%>" alt="Image"/>
+                <h3><%= some[Math.floor((Math.random() * 10) + 1)].title %></h3>
+                <div class="entry-meta">
+                    <div class="review-stars">
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-half"></span>
+                    </div>
+                    <div class="description-em">
+                        <span class="by-view-number">47</span>
+                        <span class="by-date">1 day ago</span>
+                    </div>
+                </div>
+            </a>
+            <a data-slide-index="9" href="">
+                <img src="<%= some[10].image_url%>" alt="Image"/>
+                <h3><%= some[Math.floor((Math.random() * 10) + 1)].title %></h3>
+                <div class="entry-meta">
+                    <div class="review-stars">
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-full"></span>
+                        <span class="star-half"></span>
+                    </div>
+                    <div class="description-em">
+                        <span class="by-view-number">47</span>
+                        <span class="by-date">1 day ago</span>
+                    </div>
+                </div>
+            </a>
             </a>
         </div>
     </div>
