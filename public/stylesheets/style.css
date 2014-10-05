@@ -3,20 +3,17 @@
    ======================================================================== */
 
 #search {
-    position: absolute;
-    text-align: left;
-    top: 50%; 
-    left: 20%; 
-    width: 60%;
+
+    width: 100%;
 }
 
 #sField {
-	width: 80%;
+	width: 93%;
 	font-size: 21px;
 }	
 
 #but {
-	top: 2px;
+	//top: 2px;
 }
 /* ==========================================================================
    RESET http://meyerweb.com/eric/tools/css/reset/
