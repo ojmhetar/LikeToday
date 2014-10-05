@@ -98,9 +98,49 @@ app.post('/subreq', function(req, res) {
 
 	        res.render('index', {some: weblist})
 	    }
+	    else
+	    {
+	    	res.send("Sorry, that channel does not exist yet!");
+	    }
 	})
 
-}) 
+});
+
+
+app.get('/:tagId', function(req, res) {
+ 	var query = req.param("tagId");
+	console.log(query);
+	//var query2 = "Static";
+	var url = "http://liketodaydata.gopagoda.com/feed/linksJSON" + query;
+
+	request({
+	    url: url,
+	    json: true
+	}, function (error, response, body) {
+
+	    if (!error && response.statusCode === 200) {
+
+
+			function sortByKey(array, key) {
+			return array.sort(function(a, b) {
+			    var x = a[key]; var y = b[key];
+			    return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+				});
+			}
+
+			weblist = sortByKey(body, 'score');
+
+
+	        res.render('index', {some: weblist})
+	    }
+	    else
+	    {
+	    	res.send("Sorry, this channel does not exist yet!");
+	    }
+	})
+});
+
+
 //app.get('/', function(req, res) {
 //	res.sendfile(__dirname + '/public/index.html');
 //});
