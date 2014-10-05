@@ -9,7 +9,6 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var request = require("request");
-var qs = require('querystring');
 
 var app = express();
 
@@ -101,7 +100,7 @@ app.post('/subreq', function(req, res) {
 			weblist = sortByKey(body, 'score');
 
 
-	        res.redirect('index', {some: weblist})
+	        res.render('index', {some: weblist})
 	    }
 	})
 
