@@ -52,6 +52,8 @@
 <script> 
     var one = 3; 
 
+    var articleIndex = 0;
+
 
     $(function()
     {
@@ -61,8 +63,16 @@
 
         proceed.click(function(e)
         {
-            featureArticles.scrollTop(featureArticles.scrollTop() + 130);
 
+            articleBlock = $('#featured-slider-pager > a');
+
+            articleIndex = (articleIndex + 1) %  articleBlock.length;
+
+            featureArticles.scrollTop(articleIndex * 130) ;
+
+            //featureArticles.animate({ scrollTop: featureArticles.scrollTop() }, articleIndex * 130);
+
+            articleBlock[articleIndex].click();
 
         });
 
