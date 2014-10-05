@@ -73,7 +73,8 @@ app.get('/home', function(req, res) {
 });
 
 
-var compAds = [ { "title" : "Mindsence - Software Developer (Junior)", "url" : "http://www.mindsense.co/jobs/apply?i=5&t=f" , "image_url": "http://www.mindsense.co/jobs/images/logo.png" } ,{ "title" : "Fitnet - iPhone 6 App” To The iPhone And iPad", "url" : "https://www.youtube.com/watch?v=krtRP0ct2Ng", "image_url": "https://i.ytimg.com/vi/krtRP0ct2Ng/maxresdefault.jpg" } ];
+var compAds = [{ "title" : "Mindsence - Software Developer (Junior)", "url" : "http://www.mindsense.co/jobs/apply?i=5&t=f" , "image_url": "http://www.mindsense.co/jobs/images/logo.png" },
+{ "title" : "Fitnet - iPhone 6 App” To The iPhone And iPad", "url" : "https://www.youtube.com/watch?v=krtRP0ct2Ng", "image_url": "https://i.ytimg.com/vi/krtRP0ct2Ng/maxresdefault.jpg" }];
 
 app.post('/subreq', function(req, res) {
 	var query = req.body.searchF;
