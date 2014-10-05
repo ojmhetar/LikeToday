@@ -101,7 +101,7 @@ app.post('/subreq', function(req, res) {
 			weblist = sortByKey(body, 'score');
 
 
-	        res.render('index', {some: weblist})
+	        res.redirect('index', {some: weblist})
 	    }
 	})
 
