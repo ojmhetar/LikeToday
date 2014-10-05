@@ -99,7 +99,7 @@ app.post('/subreq', function(req, res) {
 			weblist = sortByKey(body, 'score');
 
 
-	        res.render('index', {some: weblist})
+	        res.render('index', {some: weblist, ads: compAds})
 	    }
 	    else
 	    {
@@ -134,11 +134,11 @@ app.get('/:tagId', function(req, res) {
 			weblist = sortByKey(body, 'score');
 
 
-	        res.render('index', {some: weblist})
+	        res.render('index', {some: weblist, ads: compAds})
 	    }
 	    else
 	    {
-	    	res.send("Sorry, this channel does not exist yet!");
+	    	res.render('/Tech', {ads: compAds});
 	    }
 	})
 });
