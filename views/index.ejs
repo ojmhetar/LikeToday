@@ -82,15 +82,15 @@ iframe {
 #logo
 {
     background-color: transparent;
+    vertical-align: middle;
+    position: fixed;
     width: 10%;
     height: 10%;
 }
 .upperBar
 {
     background-color: red;
-    position: absolute;
-    top: 15%;
-    margin-top: 10%;
+    top: 30%;
 }
 #top-bar
 {
@@ -110,13 +110,13 @@ iframe {
 <div id="top-bar">
 	<!-- Menu -->                                  
     <ul class="top-menu">
-        <li><a href="index.html">All</a></li>
-        <li><a method="post" href="http://liketoday.com/Blacksburg">Blacksburg</a></li>
+        <li><a href="http://liketoday.com/home">All</a></li>
+        <li><a href="http://liketoday.com/Blacksburg">Blacksburg</a></li>
         <li><a href="http://liketoday.com/Tech">Technology StartUps</a></li>
         <li>
-        <form>
+        <form method="post" action="http://warm-peak-1670.herokuapp.com/subreq">
             <input type="text" class="search-field" placeholder="Add a channel"/>
-            <input type="submit"
+            <input type="submit">
         </form>
         </li>
     </ul>
@@ -134,6 +134,7 @@ iframe {
 <div id="slider-container">
     <div class="container">
         <!-- Slides MUST BE 5 -->
+        <div class="upperBar" width="1024" height="760"><img src="images/Thumb-Bar.png"></img></div>
         <ul id="featured-slider">
             <li><iframe src="<%= some[1].url%>" width="1024" height="760"></iframe></li>
             <li><iframe src="<%= some[2].url%>" width="1024" height="760"></iframe></li>
